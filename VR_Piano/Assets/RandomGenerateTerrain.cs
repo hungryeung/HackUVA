@@ -26,12 +26,12 @@ public class RandomGenerateTerrain : MonoBehaviour {
 	}
 	void GenerateFeatures(TerrainData terrainData){
 		for(int x = 0; x < width; x++){
-			if(Random.Range(0f,100f) < 90 && x > 400 && x < 600){
+			if(Random.Range(0f,100f) < 90 && x > 450 && x < 550){
 				continue;
 			}
 			for(int y = 0; y < height; y++){
-				if(y > 400 && y < 600){
-					if( (x > 400 && x < 600) || (Random.Range(0f,100f) < 90)){
+				if(y > 450 && y < 550){
+					if( (x > 450 && x < 550) || (Random.Range(0f,100f) < 90)){
 						continue;
 					}
 				}
@@ -47,7 +47,7 @@ public class RandomGenerateTerrain : MonoBehaviour {
 		float[,] heights = new float[width, height];
 		for(int x = 0; x < width; x++){
 			for(int y = 0; y < height; y++){
-				if( (x > 400 && x < 600) && (y > 400 && y < 600)){
+				if( (x > 450 && x < 550) && (y > 450 && y < 550)){
 					heights[x,y] = 1f;
 					continue;
 				}
